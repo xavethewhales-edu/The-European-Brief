@@ -41,26 +41,7 @@
 
   try {
     // Frame-bust only on the public web, not in SCORM
-    const CANON_HOST = "speak-engine.pages.dev";
-const ALLOW = new Set([
-  CANON_HOST,
-  "localhost",
-  "127.0.0.1"
-]);
-
-try {
-  if (top !== self) {
-    top.location = location;
-    return;
-  }
-
-  if (!ALLOW.has(location.hostname)) {
-    location.replace(
-      "https://" + CANON_HOST + "/" +
-      location.search + location.hash
-    );
-  }
-} catch(_) {}
+    
   } catch(_) {}
 })();
 </script>
