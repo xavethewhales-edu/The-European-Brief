@@ -525,7 +525,7 @@ SHOULD WE WORK LESS?
 Across Europe, people do not all work
 the same number of hours.
 
-Before reading anything, discuss:
+Before reading the article , discuss:
 
 • How many hours do people normally work in Spain?
 • Do people work more or fewer hours in other European countries?
