@@ -490,17 +490,22 @@ window.hideHome = function hideHome() {
 const scenes = {
 
   // =========================================================
-  // WEEK 1 — WHEN THE PLAN CHANGES
-  // European industrial relations, restructuring & negotiation
+  // WEEK 2 — SHOULD WE WORK LESS?
+  // Working hours, productivity & collective bargaining
   //
   // LEVEL:
   // A2.2 → functional B1
   //
   // MAIN LANGUAGE:
+  // • Present Simple vs Present Continuous
   // • Past Simple vs Present Perfect
-  // • should / have to / might
-  // • entering a meeting discussion
-  // • reporting developments clearly
+  // • comparatives
+  // • should / have to / might / may
+  // • First Conditional
+  // • light Second Conditional
+  //
+  // COMMUNICATIVE TARGET:
+  // Give a position, explain a consequence and add a condition.
   //
   // WRITING:
   // ONE SHORT EMAIL COMPLETED DURING THE LESSON
@@ -508,78 +513,75 @@ const scenes = {
 
 
   // =========================================================
-  // OPENING — WHAT HAPPENED, WHAT HAS CHANGED?
+  // OPENING
   // =========================================================
 
   scene1: {
     type: "text",
+
     text: `
-WHEN THE PLAN CHANGES
+SHOULD WE WORK LESS?
 
-Imagine you represent workers from one European country.
-
-Your international colleagues ask:
-
-"What is happening with the restructuring?"
+Across Europe, people do not all work
+the same number of hours.
 
 Before reading anything, discuss:
 
-• What normally happens when a company wants to reduce costs?
-• Why can restructuring be difficult for workers?
-• What can unions negotiate?
-• Is avoiding redundancies always possible?
-• What should worker representatives ask management?
+• How many hours do people normally work in Spain?
+• Do people work more or fewer hours in other European countries?
+• Does working more always mean producing more?
+• Can shorter working hours improve people's lives?
+• What should worker representatives consider before changing working time?
 
-TODAY'S LANGUAGE QUESTION:
+TODAY'S CENTRAL QUESTION:
 
-How do we clearly explain:
-
-WHAT HAPPENED BEFORE
-
-and
-
-WHAT IS IMPORTANT NOW?
+CAN PEOPLE WORK FEWER HOURS
+WITHOUT REDUCING PRODUCTIVITY?
     `,
+
     choices: [
-      { text: "Examine the situation", next: "scene2_article_intro" }
+      {
+        text: "Compare working hours across Europe",
+        next: "scene2_article"
+      }
     ]
   },
 
 
   // =========================================================
-  // ARTICLE — REUTERS
+  // ARTICLE — EURONEWS
   // =========================================================
 
-  scene2_article_intro: {
+  scene2_article: {
     type: "text",
+
     text: `
-READING — A NEW RESTRUCTURING PLAN
+READING — WORKING HOURS ACROSS EUROPE
 
-Read the Reuters article:
+Read the Euronews article:
 
-"Volkswagen flags 50,000 job cuts across group
-as board approves turnaround plan"
+"Who works the hardest in Europe?
+The countries with the longest and shortest working weeks"
 
-3 September 2026
+10 June 2026
 
-Do NOT try to understand every word.
+Do NOT translate every sentence.
 
-Find these four things:
+Find:
 
-• What has the company approved?
-• How many additional jobs could be affected?
-• What may happen to some German plants?
-• Why are negotiations with worker representatives important?
+• the EU average;
+• which EU country has the longest working week;
+• which country has the shortest;
+• how Spain compares with Germany;
+• why collective bargaining can affect working hours.
 
-Remember:
-
-You are reading for the MAIN MESSAGE,
-not translating every sentence.
+Then return to the lesson.
     `,
+
     choices: [
       {
-        text: "Open Reuters article ↗",
-        url: "https://www.reuters.com/business/autos-transportation/volkswagen-supervisory-board-approves-transformation-plan-2026-09-03/",
+        text: "Open Euronews article ↗",
+        url: "https://www.euronews.com/business/2026/06/10/who-works-the-hardest-in-europe-the-countries-with-the-longest-and-shortest-working-weeks",
         target: "_blank"
       },
       {
@@ -593,24 +595,26 @@ not translating every sentence.
   scene3_article_check: {
     type: "text",
     shuffleOptions: true,
+
     text: `
-Which sentence BEST describes the current situation?
+Which conclusion is BEST supported by the article?
     `,
+
     choices: [
       {
-        text: "The company has approved a new restructuring plan that could affect thousands of jobs.",
-        next: "scene4_tense_intro"
-      },
-      {
-        text: "All German factories closed after the negotiations failed.",
+        text: "European countries all have approximately the same working week.",
         next: "scene3_retry"
       },
       {
-        text: "The unions have already accepted every part of the restructuring plan.",
+        text: "Countries with longer working weeks always have higher productivity.",
         next: "scene3_retry"
       },
       {
-        text: "The company decided that no more changes are necessary.",
+        text: "Working hours vary considerably across Europe, and collective bargaining is one factor that can influence them.",
+        next: "scene4_comparison_intro"
+      },
+      {
+        text: "Workers personally choose the normal working hours in every European country.",
         next: "scene3_retry"
       }
     ]
@@ -619,161 +623,165 @@ Which sentence BEST describes the current situation?
 
   scene3_retry: {
     type: "text",
+
     text: `
-READ THE MAIN MESSAGE AGAIN.
+LOOK AT THE RELATIONSHIPS.
 
-The situation is NOT finished.
+The article shows:
 
-A restructuring plan has been approved,
-but important questions remain.
+DIFFERENT COUNTRIES
+→ DIFFERENT WORKING HOURS
 
-Think about:
+Possible reasons include:
 
-PLAN
-→ JOBS
-→ FACTORIES
-→ NEGOTIATION
+• collective bargaining;
+• part-time employment;
+• economic structure;
+• sector differences.
 
-Choose the answer that describes
-what is happening NOW.
+The article does NOT say:
+
+MORE HOURS = MORE PRODUCTIVITY
+
+Try again.
     `,
-    choices: [
-      { text: "Try again", next: "scene3_article_check" }
-    ]
-  },
 
-
-  // =========================================================
-  // GRAMMAR 1 — PAST SIMPLE VS PRESENT PERFECT
-  // =========================================================
-
-  scene4_tense_intro: {
-    type: "text",
-    text: `
-GRAMMAR — BEFORE OR NOW?
-
-Compare:
-
-PAST SIMPLE
-
-The company AGREED a previous restructuring plan in 2024.
-
-We know WHEN.
-
-2024 = finished time.
-
-
-PRESENT PERFECT
-
-The company HAS APPROVED a new plan.
-
-The new decision is important NOW.
-
-
-A SIMPLE RULE:
-
-FINISHED TIME
-→ PAST SIMPLE
-
-IMPORTANT DEVELOPMENT NOW
-→ PRESENT PERFECT
-
-
-Compare:
-
-The representatives MET management last week.
-
-The representatives HAVE MET management several times.
-    `,
-    choices: [
-      { text: "Test the difference", next: "scene5_tense_mc" }
-    ]
-  },
-
-
-  scene5_tense_mc: {
-    type: "text",
-    shuffleOptions: true,
-    text: `
-It is now September.
-
-Which sentence is correct?
-    `,
     choices: [
       {
-        text: "The company has announced the new plan yesterday.",
-        next: "scene5_retry"
-      },
-      {
-        text: "The company announced the new plan yesterday.",
-        next: "scene6_present_perfect_mc"
-      },
-      {
-        text: "The company has announce the new plan yesterday.",
-        next: "scene5_retry"
-      },
-      {
-        text: "The company did announced the new plan yesterday.",
-        next: "scene5_retry"
+        text: "Reassess the article",
+        next: "scene3_article_check"
       }
     ]
   },
 
 
-  scene5_retry: {
+  // =========================================================
+  // COMPARATIVES
+  // =========================================================
+
+  scene4_comparison_intro: {
     type: "text",
+
     text: `
-YESTERDAY = FINISHED TIME
+COMPARE THE COUNTRIES
 
-So use:
+According to the article:
 
-PAST SIMPLE
+GERMANY
+33.9 hours
 
-The company ANNOUNCED the plan yesterday.
+SPAIN
+36.3 hours
 
-Not:
+So we can say:
 
-has announced yesterday
+Workers in Germany work
+FEWER hours than workers in Spain.
 
-and not:
+Spain has
+A LONGER average working week than Germany.
 
-did announced
 
-After DID, we use the BASE VERB:
+Remember:
 
-did announce
+FEWER
+→ countable things
+
+fewer hours
+fewer meetings
+fewer shifts
+
+MORE
+→ a larger number
+
+more hours
+more meetings
+more shifts
     `,
+
     choices: [
-      { text: "Try again", next: "scene5_tense_mc" }
+      {
+        text: "Complete the comparison",
+        next: "scene5_comparison_fib"
+      }
     ]
   },
 
 
-  scene6_present_perfect_mc: {
+  scene5_comparison_fib: {
+    type: "fill-in-the-blank",
+
+    text: `
+Complete the two comparisons.
+    `,
+
+    sentence: [
+      "Workers in Germany work",
+      "__________",
+      "hours than workers in Spain, while Spain has",
+      "__________",
+      "average working week."
+    ],
+
+    blanks: [1, 3],
+
+    options: [
+      "more",
+      "a shorter",
+      "fewer",
+      "much",
+      "a longer",
+      "many"
+    ],
+
+    correct: [
+      "fewer",
+      "a longer"
+    ],
+
+    next: "scene6_tense_logic"
+  },
+
+
+  // =========================================================
+  // PRESENT SIMPLE VS PRESENT CONTINUOUS
+  // =========================================================
+
+  scene6_tense_logic: {
     type: "text",
     shuffleOptions: true,
+
     text: `
-There is no finished time.
+TENSE LOGIC
 
-The result is important now.
+Imagine a European manufacturing company.
 
-Which sentence is best?
+Normally:
+
+Employees WORK five days a week.
+
+But now:
+
+The company IS TESTING a shorter working week.
+
+Which explanation is correct?
     `,
+
     choices: [
       {
-        text: "The two sides didn't reach an agreement yet.",
+        text: "Present Simple describes the usual arrangement; Present Continuous describes a temporary or current change.",
+        next: "scene7_tense_mc"
+      },
+      {
+        text: "Present Continuous is always used for work and Present Simple is always used for free time.",
         next: "scene6_retry"
       },
       {
-        text: "The two sides haven't reached an agreement yet.",
-        next: "scene7_tense_scramble"
-      },
-      {
-        text: "The two sides haven't reach an agreement yet.",
+        text: "Present Simple describes the future and Present Continuous describes the past.",
         next: "scene6_retry"
       },
       {
-        text: "The two sides doesn't reached an agreement yet.",
+        text: "There is no important difference between the two forms.",
         next: "scene6_retry"
       }
     ]
@@ -782,251 +790,277 @@ Which sentence is best?
 
   scene6_retry: {
     type: "text",
+
     text: `
-YET often connects the situation to NOW.
+THINK ABOUT TIME.
 
-Useful pattern:
+USUAL / NORMAL
 
-HAVE / HAS
-+
-PAST PARTICIPLE
+Employees WORK five days a week.
 
-They HAVE NOT REACHED an agreement yet.
+NOW / TEMPORARY CHANGE
 
-The situation is still open.
+The company IS TESTING a new schedule.
+
+Present Simple
+→ normal situation
+
+Present Continuous
+→ happening around now
     `,
-    choices: [
-      { text: "Try again", next: "scene6_present_perfect_mc" }
-    ]
-  },
 
-
-  scene7_tense_scramble: {
-    type: "scramble",
-    disableSpeech: true,
-    text: `
-Build the sentence.
-
-The negotiations are still continuing.
-    `,
-    scramble: [
-      "an agreement",
-      "the representatives",
-      "yet.",
-      "have not reached"
-    ],
-    correct: [
-      "the representatives",
-      "have not reached",
-      "an agreement",
-      "yet."
-    ],
-    next: "scene8_meeting_language"
-  },
-
-
-  // =========================================================
-  // MEETING LANGUAGE
-  // =========================================================
-
-  scene8_meeting_language: {
-    type: "text",
-    text: `
-ONLINE MEETINGS — ENTER THE CONVERSATION
-
-Understanding the meeting is not enough.
-
-You need to ENTER it.
-
-Useful phrases:
-
-CAN I ADD SOMETHING?
-
-I'D LIKE TO MAKE ONE POINT.
-
-FROM OUR SIDE, THE MAIN PROBLEM IS...
-
-COULD YOU EXPLAIN THAT AGAIN?
-
-DO YOU MEAN THAT...?
-
-WHAT EXACTLY ARE YOU PROPOSING?
-
-You do NOT need a long speech.
-
-One clear sentence is enough
-to become part of the discussion.
-    `,
-    choices: [
-      { text: "Enter the meeting", next: "scene9_meeting_mc" }
-    ]
-  },
-
-
-  scene9_meeting_mc: {
-    type: "text",
-    shuffleOptions: true,
-    text: `
-A German representative finishes speaking.
-
-You want to disagree politely and explain
-that more discussion is necessary.
-
-What is the best intervention?
-    `,
     choices: [
       {
-        text: "No, this is not correct and we don't accept.",
-        next: "scene9_retry"
-      },
-      {
-        text: "Can I add something? From our side, I think we should discuss the proposal again before making a decision.",
-        next: "scene10_video_intro"
-      },
-      {
-        text: "I am not agree because this proposal is bad.",
-        next: "scene9_retry"
-      },
-      {
-        text: "You have wrong because workers need another solution.",
-        next: "scene9_retry"
+        text: "Try again",
+        next: "scene6_tense_logic"
       }
     ]
   },
 
 
-  scene9_retry: {
+  scene7_tense_mc: {
     type: "text",
+    shuffleOptions: true,
+
     text: `
-KEEP IT SIMPLE AND PROFESSIONAL.
+A company normally operates five days a week,
+but this month it is experimenting with four days.
 
-First:
-
-ENTER THE DISCUSSION
-
-Can I add something?
-
-Then:
-
-GIVE YOUR POSITION
-
-From our side...
-
-I think we should...
-
-Avoid:
-
-"I am not agree"
-
-Say:
-
-"I don't agree"
-
-or:
-
-"I disagree."
+Which sentence is correct?
     `,
+
     choices: [
-      { text: "Try again", next: "scene9_meeting_mc" }
+      {
+        text: "The company tests a four-day week this month.",
+        next: "scene7_retry"
+      },
+      {
+        text: "The company testing a four-day week this month.",
+        next: "scene7_retry"
+      },
+      {
+        text: "The company is test a four-day week this month.",
+        next: "scene7_retry"
+      },
+      {
+        text: "The company is testing a four-day week this month.",
+        next: "scene8_tense_fib"
+      }
+    ]
+  },
+
+
+  scene7_retry: {
+    type: "text",
+
+    text: `
+THIS MONTH suggests a current,
+temporary situation.
+
+Use:
+
+BE
++
+VERB-ING
+
+The company IS TESTING...
+
+Not:
+
+is test
+
+and not:
+
+company testing
+    `,
+
+    choices: [
+      {
+        text: "Try again",
+        next: "scene7_tense_mc"
+      }
+    ]
+  },
+
+
+  scene8_tense_fib: {
+    type: "fill-in-the-blank",
+
+    text: `
+Choose the tense according to the situation.
+    `,
+
+    sentence: [
+      "Workers in Spain",
+      "__________",
+      "more hours on average than workers in Germany, while some companies",
+      "__________",
+      "shorter working weeks at the moment."
+    ],
+
+    blanks: [1, 3],
+
+    options: [
+      "have worked",
+      "are testing",
+      "works",
+      "worked",
+      "work",
+      "is testing"
+    ],
+
+    correct: [
+      "work",
+      "are testing"
+    ],
+
+    next: "scene9_meeting_language"
+  },
+
+
+  // =========================================================
+  // MEETING PARTICIPATION
+  // =========================================================
+
+  scene9_meeting_language: {
+    type: "text",
+
+    text: `
+MEETING LANGUAGE — GIVE A POSITION
+
+Last week you practised:
+
+CAN I ADD SOMETHING?
+
+Now continue.
+
+Useful structures:
+
+I UNDERSTAND THE ARGUMENT, BUT...
+
+FROM OUR SIDE, THE MAIN CONCERN IS...
+
+BEFORE WE AGREE, WE NEED TO KNOW...
+
+I THINK THIS COULD WORK IF...
+
+WE SHOULD ALSO CONSIDER...
+
+The objective is not a long speech.
+
+Try to make:
+
+ONE POSITION
++
+ONE REASON
++
+ONE CONDITION
+    `,
+
+    choices: [
+      {
+        text: "Hear another perspective",
+        next: "scene10_video_intro"
+      }
     ]
   },
 
 
   // =========================================================
-  // VIDEO — REUTERS
+  // VIDEO — BBC NEWS
   // =========================================================
 
   scene10_video_intro: {
     type: "text",
+
     text: `
-VIDEO — WHAT HAPPENED BEFORE?
+VIDEO — THE FOUR-DAY WEEK
 
-Now go back to the earlier stage
-of the restructuring story.
+Now watch:
 
-Reuters reported in December 2024 that
-Volkswagen and unions reached an agreement
-after difficult negotiations.
+BBC News
 
-Watch for:
+"World's biggest pilot of four-day week begins"
 
-• the number of jobs involved;
-• whether compulsory redundancies were planned;
-• why an agreement mattered;
-• what unions and management achieved through negotiation.
+The UK trial involved around 70 companies.
 
-This gives us an important question:
+Listen for:
 
-WHAT WAS AGREED THEN,
+• how long the trial was planned to last;
+• how much employees were paid;
+• how many of their normal hours they worked;
+• what companies hoped would happen to productivity.
 
-AND
+You do not need every word.
 
-WHAT HAS CHANGED SINCE THEN?
+Listen for the NUMBERS
+and the MAIN IDEA.
     `,
+
     choices: [
-      { text: "Watch the Reuters report", next: "scene11_video" }
+      {
+        text: "Watch the BBC report",
+        next: "scene11_video"
+      }
     ]
   },
 
 
   scene11_video: {
     type: "video-multi-question",
-    youtube: "https://www.youtube.com/watch?v=8C5gtlP-Eno",
+
+    youtube: "https://www.youtube.com/watch?v=bNc4nzhb22M",
 
     text: `
-REUTERS
+BBC NEWS
 
-"VW reaches union deal to cut 35,000 German jobs after talks"
+"World's biggest pilot of four-day week begins"
 
-Watch the report.
-
-Listen for the MAIN IDEAS.
-
-You do not need to understand every word.
+Watch the report and answer the questions.
     `,
 
     shuffleOptions: true,
 
     questions: [
       {
-        text: "What did Volkswagen and the unions reach?",
+        text: "Approximately how many companies were taking part?",
         options: [
-          "A new sales target",
-          "A restructuring agreement",
-          "A European transport agreement",
-          "A temporary factory closure"
-        ],
-        correct: 1
-      },
-      {
-        text: "What was one objective of the agreement?",
-        options: [
-          "To avoid a larger industrial conflict",
-          "To increase the number of factories immediately",
-          "To stop all negotiations",
-          "To move every German job abroad"
-        ],
-        correct: 0
-      },
-      {
-        text: "Which sentence correctly describes the 2024 event?",
-        options: [
-          "The company has reached an agreement in December 2024.",
-          "The company reach an agreement in December 2024.",
-          "The company reached an agreement in December 2024.",
-          "The company did reached an agreement in December 2024."
+          "About 20",
+          "About 40",
+          "About 70",
+          "About 150"
         ],
         correct: 2
       },
       {
-        text: "Which sentence connects the earlier agreement with the situation now?",
+        text: "How long was the trial expected to continue?",
         options: [
-          "The situation has changed since the 2024 agreement.",
-          "The situation changed since the 2024 agreement yesterday.",
-          "The situation have changed since the 2024 agreement.",
-          "The situation did changed since the 2024 agreement."
+          "Six months",
+          "One month",
+          "Two years",
+          "Three weeks"
         ],
         correct: 0
+      },
+      {
+        text: "Which arrangement best describes the trial?",
+        options: [
+          "80% pay for 100% of normal hours",
+          "100% pay for 100% of normal hours",
+          "80% pay for 80% of normal hours",
+          "100% pay for 80% of normal hours"
+        ],
+        correct: 3
+      },
+      {
+        text: "What was an important objective of the trial?",
+        options: [
+          "To increase the number of working days",
+          "To maintain or improve productivity with fewer hours",
+          "To replace permanent employees with temporary workers",
+          "To eliminate collective bargaining"
+        ],
+        correct: 1
       }
     ],
 
@@ -1036,8 +1070,8 @@ You do not need to understand every word.
     },
 
     endings: {
-      high: "scene12_compare",
-      medium: "scene12_compare",
+      high: "scene12_video_language",
+      medium: "scene12_video_language",
       low: "scene11_retry"
     }
   },
@@ -1045,437 +1079,695 @@ You do not need to understand every word.
 
   scene11_retry: {
     type: "text",
+
     text: `
-WATCH FOR THE STORY, NOT EVERY WORD.
+LISTEN FOR FOUR KEY FACTS:
 
-2024:
+COMPANIES
+→ about 70
 
-MANAGEMENT
-+
-UNIONS
-+
-NEGOTIATION
-→ AGREEMENT
+LENGTH
+→ six months
 
-Now compare that earlier agreement
-with the new situation.
+PAY
+→ 100%
 
-Listen again.
+HOURS
+→ 80%
+
+The question is whether fewer hours
+can work without reducing productivity.
+
+Watch again.
     `,
-    choices: [
-      { text: "Watch again", next: "scene11_video" }
-    ]
-  },
 
-
-  // =========================================================
-  // INTEGRATING THE TWO SOURCES
-  // =========================================================
-
-  scene12_compare: {
-    type: "text",
-    text: `
-THEN AND NOW
-
-2024:
-
-The company and unions REACHED
-a restructuring agreement.
-
-PAST SIMPLE
-
-
-2026:
-
-The company HAS APPROVED
-another major transformation plan.
-
-PRESENT PERFECT
-
-
-This is useful meeting language:
-
-"In 2024, the two sides reached an agreement,
-but the situation has changed."
-
-Try saying that sentence aloud.
-
-Then add:
-
-"I think the representatives should..."
-    `,
-    choices: [
-      { text: "Decide what should happen next", next: "scene13_modals_intro" }
-    ]
-  },
-
-
-  // =========================================================
-  // GRAMMAR 2 — MODALS
-  // =========================================================
-
-  scene13_modals_intro: {
-    type: "text",
-    text: `
-WHAT NEXT?
-
-Three useful ideas:
-
-SHOULD
-= advice / opinion
-
-The representatives SHOULD ask for more information.
-
-
-HAVE TO
-= necessity
-
-The two sides HAVE TO continue negotiating.
-
-
-MIGHT
-= possibility
-
-Some factories MIGHT be affected.
-
-
-IMPORTANT:
-
-should negotiate
-
-NOT
-
-should to negotiate
-
-
-might change
-
-NOT
-
-might changes
-    `,
-    choices: [
-      { text: "Test the modals", next: "scene14_modals_mc" }
-    ]
-  },
-
-
-  scene14_modals_mc: {
-    type: "text",
-    shuffleOptions: true,
-    text: `
-You are in a European representatives' meeting.
-
-Which statement is grammatically correct
-and professionally useful?
-    `,
     choices: [
       {
-        text: "We should to ask management for more information.",
-        next: "scene14_retry"
-      },
-      {
-        text: "Management might changes the proposal.",
-        next: "scene14_retry"
-      },
-      {
-        text: "We have to discuss the possible impact before the next meeting.",
-        next: "scene15_modal_scramble"
-      },
-      {
-        text: "The representatives should discussing another solution.",
-        next: "scene14_retry"
+        text: "Watch again",
+        next: "scene11_video"
       }
     ]
   },
 
 
-  scene14_retry: {
+  // =========================================================
+  // PAST SIMPLE VS PRESENT PERFECT
+  // =========================================================
+
+  scene12_video_language: {
     type: "text",
+
     text: `
-REMEMBER:
+CONNECT PAST AND PRESENT
+
+The BBC trial STARTED in 2022.
+
+PAST SIMPLE
+
+Why?
+
+2022 is a finished time.
+
+
+Now imagine we are discussing
+the wider idea today:
+
+Many companies HAVE EXPERIMENTED
+with different working patterns.
+
+PRESENT PERFECT
+
+Why?
+
+We are talking about experience
+up to NOW.
+
+Compare:
+
+The trial STARTED in 2022.
+
+Companies HAVE TESTED different models
+in recent years.
+    `,
+
+    choices: [
+      {
+        text: "Complete the timeline",
+        next: "scene13_past_present_fib"
+      }
+    ]
+  },
+
+
+  scene13_past_present_fib: {
+    type: "fill-in-the-blank",
+
+    text: `
+Choose the form that matches the time logic.
+    `,
+
+    sentence: [
+      "The UK trial",
+      "__________",
+      "in 2022, and many companies",
+      "__________",
+      "with alternative working patterns in recent years."
+    ],
+
+    blanks: [1, 3],
+
+    options: [
+      "have experimented",
+      "has started",
+      "experimented",
+      "started",
+      "are experimenting",
+      "have start"
+    ],
+
+    correct: [
+      "started",
+      "have experimented"
+    ],
+
+    next: "scene14_modals_intro"
+  },
+
+
+  // =========================================================
+  // MODAL LOGIC
+  // =========================================================
+
+  scene14_modals_intro: {
+    type: "text",
+
+    text: `
+MODALS — WHAT DO YOU REALLY MEAN?
+
+SHOULD
+→ recommendation
+
+Representatives SHOULD discuss workload.
+
+
+HAVE TO
+→ necessity
+
+The company HAS TO respect the agreement.
+
+
+MIGHT / MAY
+→ possibility
+
+A shorter week MIGHT improve productivity.
+
+
+CAN
+→ general possibility / ability
+
+Flexible arrangements CAN help some companies.
+
+
+Remember:
+
+should discuss
+NOT
+should to discuss
+
+might improve
+NOT
+might improves
+
+have to negotiate
+NOT
+have to negotiating
+    `,
+
+    choices: [
+      {
+        text: "Choose the right meaning",
+        next: "scene15_modals_mc"
+      }
+    ]
+  },
+
+
+  scene15_modals_mc: {
+    type: "text",
+    shuffleOptions: true,
+
+    text: `
+Management proposes changing weekly working hours.
+
+Representatives do not yet know
+how the change will affect workload.
+
+Which response is strongest?
+    `,
+
+    choices: [
+      {
+        text: "The company should to explain the workload first.",
+        next: "scene15_retry"
+      },
+      {
+        text: "The change might improves productivity, so discussion is unnecessary.",
+        next: "scene15_retry"
+      },
+      {
+        text: "We have discuss the proposal before agreeing.",
+        next: "scene15_retry"
+      },
+      {
+        text: "We should ask for more information because the change might affect workload.",
+        next: "scene16_conditional_scramble"
+      }
+    ]
+  },
+
+
+  scene15_retry: {
+    type: "text",
+
+    text: `
+KEEP THE MODAL SIMPLE.
 
 SHOULD + BASE VERB
 
 should ask
 
+
 MIGHT + BASE VERB
 
-might change
+might affect
+
 
 HAVE TO + BASE VERB
 
 have to discuss
 
-No TO after SHOULD or MIGHT.
+The modal tells us the speaker's meaning:
 
-No -S after MIGHT.
+recommendation,
+possibility,
+or necessity.
     `,
-    choices: [
-      { text: "Try again", next: "scene14_modals_mc" }
-    ]
-  },
 
-
-  scene15_modal_scramble: {
-    type: "scramble",
-    disableSpeech: true,
-    text: `
-Build a useful meeting intervention.
-    `,
-    scramble: [
-      "before we make a decision.",
-      "I think",
-      "more information",
-      "we should ask for"
-    ],
-    correct: [
-      "I think",
-      "we should ask for",
-      "more information",
-      "before we make a decision."
-    ],
-    next: "scene16_integrated_case"
-  },
-
-
-  // =========================================================
-  // FINAL SPEAKING / DECISION TASK
-  // =========================================================
-
-  scene16_integrated_case: {
-    type: "text",
-    shuffleOptions: true,
-    text: `
-EUROPEAN REPRESENTATIVES' MEETING
-
-A colleague says:
-
-"The company reached an agreement before,
-so I don't think we need to worry about
-the new restructuring plan."
-
-Which response is strongest?
-    `,
     choices: [
       {
-        text: "I am not agree. The company has new problems.",
-        next: "scene16_retry"
-      },
-      {
-        text: "Can I add something? The company reached an agreement before, but the situation has changed. I think we should ask for more information.",
-        next: "scene17_email_intro"
-      },
-      {
-        text: "No. We have to making another negotiation.",
-        next: "scene16_retry"
-      },
-      {
-        text: "The company might to close factories, so this is very bad.",
-        next: "scene16_retry"
+        text: "Try again",
+        next: "scene15_modals_mc"
       }
     ]
   },
 
 
-  scene16_retry: {
-    type: "text",
+  // =========================================================
+  // FIRST CONDITIONAL
+  // =========================================================
+
+  scene16_conditional_scramble: {
+    type: "scramble",
+    disableSpeech: true,
+
     text: `
-BUILD THE RESPONSE IN THREE STEPS:
+Build ONE useful meeting sentence.
 
-1. ENTER
-
-Can I add something?
-
-
-2. EXPLAIN THE CHANGE
-
-The company reached an agreement before,
-but the situation has changed.
-
-
-3. PROPOSE ACTION
-
-I think we should ask for more information.
-
-Clear English is more useful
-than complicated English.
+The condition is possible in the future.
     `,
+
+    scramble: [
+      "before agreeing to the proposal.",
+      "representatives should",
+      "If working hours change,",
+      "discuss the possible impact"
+    ],
+
+    correct: [
+      "If working hours change,",
+      "representatives should",
+      "discuss the possible impact",
+      "before agreeing to the proposal."
+    ],
+
+    next: "scene17_second_conditional"
+  },
+
+
+  // =========================================================
+  // SECOND CONDITIONAL — LIGHT INTRODUCTION
+  // =========================================================
+
+  scene17_second_conditional: {
+    type: "text",
+    shuffleOptions: true,
+
+    text: `
+NOW MAKE IT HYPOTHETICAL.
+
+You are NOT saying this proposal exists.
+
+You are imagining it.
+
+"If your company proposed a four-day week,
+what would you ask management?"
+
+Which answer correctly continues the hypothetical situation?
+    `,
+
     choices: [
-      { text: "Try again", next: "scene16_integrated_case" }
+      {
+        text: "I would ask how the change would affect workload and pay.",
+        next: "scene18_grammar_run"
+      },
+      {
+        text: "I will asked how the change affects workload and pay.",
+        next: "scene17_retry"
+      },
+      {
+        text: "I would asked how the change will affecting workload.",
+        next: "scene17_retry"
+      },
+      {
+        text: "I ask how would the change affected workload.",
+        next: "scene17_retry"
+      }
+    ]
+  },
+
+
+  scene17_retry: {
+    type: "text",
+
+    text: `
+HYPOTHETICAL PRESENT / FUTURE:
+
+IF + PAST SIMPLE
+
+If the company PROPOSED...
+
+then:
+
+WOULD + BASE VERB
+
+I WOULD ASK...
+
+Not:
+
+would asked
+
+and not:
+
+will asked
+    `,
+
+    choices: [
+      {
+        text: "Try again",
+        next: "scene17_second_conditional"
+      }
     ]
   },
 
 
   // =========================================================
-  // IN-CLASS WRITING
+  // GRAMMAR RUN
   // =========================================================
 
-  scene17_email_intro: {
+  scene18_grammar_run: {
+    type: "conjugation-race",
+
+    text: "Timed recap: type the exact word(s). Use the time clue and meaning to choose the structure.",
+
+    timerPer: 12,
+    shuffle: true,
+    showAnswerOnWrong: true,
+    caseInsensitive: true,
+    acceptPunctuationVariants: true,
+    suppressHub: true,
+
+    scoring: {
+      high: 7,
+      medium: 5
+    },
+
+    endings: {
+      high: "scene19_integrated_case",
+      medium: "scene19_integrated_case",
+      low: "scene18_retry"
+    },
+
+    questions: [
+      {
+        prompt: "Workers in Spain ___ more hours on average than workers in Germany.",
+        answers: ["work"],
+        hint: "(work / are working / worked)"
+      },
+      {
+        prompt: "This month the company ___ testing a shorter working week.",
+        answers: ["is"],
+        hint: "(is / does / has)"
+      },
+      {
+        prompt: "The UK four-day-week trial ___ in 2022.",
+        answers: ["started"],
+        hint: "(started / has started / starts)"
+      },
+      {
+        prompt: "Many employers ___ experimented with alternative working patterns in recent years.",
+        answers: ["have"],
+        hint: "(have / did / are)"
+      },
+      {
+        prompt: "Representatives should ___ the possible impact before agreeing.",
+        answers: ["discuss"],
+        hint: "(discuss / to discuss / discussing)"
+      },
+      {
+        prompt: "A shorter working week ___ improve well-being, but the result is not certain.",
+        answers: ["might", "may"],
+        hint: "(might / has to / did)"
+      },
+      {
+        prompt: "If working hours change, employees ___ need new arrangements.",
+        answers: ["may", "might"],
+        hint: "(may / did / are)"
+      },
+      {
+        prompt: "If my company proposed this change, I ___ ask about workload first.",
+        answers: ["would"],
+        hint: "(would / will / did)"
+      }
+    ]
+  },
+
+
+  scene18_retry: {
     type: "text",
+
+    text: `
+QUICK TENSE MAP
+
+USUAL
+→ Present Simple
+
+Workers WORK...
+
+
+HAPPENING NOW
+→ Present Continuous
+
+The company IS TESTING...
+
+
+FINISHED TIME
+→ Past Simple
+
+The trial STARTED in 2022.
+
+
+EXPERIENCE / CHANGE UP TO NOW
+→ Present Perfect
+
+Companies HAVE TESTED...
+
+
+RECOMMENDATION
+→ SHOULD + base verb
+
+
+POSSIBILITY
+→ MAY / MIGHT + base verb
+
+
+REAL FUTURE POSSIBILITY
+→ IF + Present Simple
+
+
+HYPOTHETICAL
+→ IF + Past Simple
+→ WOULD + base verb
+
+Try the Grammar Run again.
+    `,
+
+    choices: [
+      {
+        text: "Retry Grammar Run",
+        next: "scene18_grammar_run"
+      }
+    ]
+  },
+
+
+  // =========================================================
+  // INTEGRATED MEETING CHALLENGE
+  // =========================================================
+
+  scene19_integrated_case: {
+    type: "text",
+    shuffleOptions: true,
+
+    text: `
+EUROPEAN REPRESENTATIVES' MEETING
+
+A representative says:
+
+"The four-day week worked in the UK trial,
+so every European manufacturing company
+should introduce it."
+
+Which response is strongest?
+    `,
+
+    choices: [
+      {
+        text: "I am agree because people has worked too many hours.",
+        next: "scene19_retry"
+      },
+      {
+        text: "The trial was successful, so all companies have to introducing the same system.",
+        next: "scene19_retry"
+      },
+      {
+        text: "I understand the argument, but different sectors have different needs. If working hours change, we should first consider workload, pay and productivity.",
+        next: "scene20_email_intro"
+      },
+      {
+        text: "If all companies reduced hours, productivity will always improve.",
+        next: "scene19_retry"
+      }
+    ]
+  },
+
+
+  scene19_retry: {
+    type: "text",
+
+    text: `
+AVOID ABSOLUTE CONCLUSIONS.
+
+One trial does not prove
+that one system will work everywhere.
+
+A useful meeting structure is:
+
+I UNDERSTAND THE ARGUMENT, BUT...
+
+Then:
+
+IDENTIFY A DIFFERENCE
+
+and
+
+ADD A CONDITION.
+
+For example:
+
+If working hours change,
+we should first consider...
+    `,
+
+    choices: [
+      {
+        text: "Reassess the response",
+        next: "scene19_integrated_case"
+      }
+    ]
+  },
+
+
+  // =========================================================
+  // FINAL IN-CLASS EMAIL
+  // =========================================================
+
+  scene20_email_intro: {
+    type: "text",
+
     text: `
 FINAL TASK — WRITE IT
 
-You have just finished an online meeting
+You have just attended an online meeting
 with worker representatives from several countries.
 
-One colleague could not attend.
+The meeting discussed working hours
+and the possibility of shorter working weeks.
 
-Send a SHORT email explaining:
+A colleague could not attend.
 
-• what happened before;
-• what has changed now;
-• what is still unclear;
-• what you think representatives should do next.
+Write a short update.
 
-Keep it simple.
+Explain:
+
+• one difference between countries;
+• what idea the group discussed;
+• one possible benefit or problem;
+• what representatives should do next.
 
 Aim for:
 
-60–80 WORDS
+70–90 WORDS
 
-You should be able to finish this
-BEFORE THE LESSON ENDS.
+Complete the email before the lesson ends.
     `,
+
     choices: [
-      { text: "Write the email", next: "scene18_email" }
+      {
+        text: "Write the meeting update",
+        next: "scene21_email"
+      }
     ]
   },
 
 
-  scene18_email: {
+  scene21_email: {
     type: "email",
     awardOnEnter: 8,
-    text: `WEEK 1 — MEETING FOLLOW-UP
 
-Write approximately 60–80 words.
+    text: `
+WEEK 2 — EUROPEAN MEETING UPDATE
 
-A colleague missed today's European representatives' meeting.
+Write approximately 70–90 words.
 
-Explain the situation.
+A colleague missed the meeting.
+
+Explain the discussion about working hours.
 
 Include:
 
-• one PAST SIMPLE sentence:
-  The company reached / announced / discussed...
+• ONE COMPARISON:
+  Workers in ___ work more/fewer hours than...
 
-• one PRESENT PERFECT sentence:
-  The situation has changed...
-  The two sides have not reached...
+• ONE TENSE CONTRAST:
+  The trial started...
+  Companies have tested...
 
-• one MODAL:
-  should / have to / might
+• ONE MODAL:
+  should / have to / might / may
 
-Useful opening:
+• ONE POSSIBLE CONSEQUENCE:
+  If working hours change...
+
+Useful language:
 
 Hi,
 
 Here is a quick update from today's meeting.
 
-Useful language:
-
-In 2024...
-Since then...
-The situation has changed...
-We still don't know...
+We discussed...
+Compared with...
+Some companies have...
+This might...
+If...
 I think we should...
 
-KEEP THE EMAIL SHORT AND CLEAR.`,
+KEEP IT SHORT, CLEAR AND PROFESSIONAL.
+    `,
+
     teacherEmail: "xavier.benitz@gmail.com",
-    emailSubject: "Week 1 — European Meeting Follow-up",
+    emailSubject: "Week 2 — European Meeting Update",
     emailBody: "",
-    next: "scene19_email_sent"
+
+    next: "scene22_email_sent"
   },
 
 
-  scene19_email_sent: {
+  scene22_email_sent: {
     type: "text",
-    text: `
-✅ EMAIL SENT
 
-TODAY'S SIMPLE SYSTEM:
+    text: `
+✅ WRITING TASK COMPLETE
+
+TODAY'S TIME MAP:
+
+USUALLY
+→ workers WORK
+
+NOW
+→ companies ARE TESTING
 
 FINISHED PAST
-→ PAST SIMPLE
+→ the trial STARTED
 
-The two sides reached an agreement in 2024.
+UP TO NOW
+→ companies HAVE TESTED
 
+POSSIBILITY
+→ it MIGHT work
 
-IMPORTANT NOW
-→ PRESENT PERFECT
+REAL CONDITION
+→ IF hours change...
 
-The situation has changed.
-
-
-NEXT ACTION
-→ MODAL
-
-We should ask for more information.
-
-We have to continue negotiating.
-
-The company might change the plan.
+HYPOTHETICAL
+→ IF a company PROPOSED...
+→ I WOULD ASK...
     `,
-    choices: [
-      { text: "Final challenge", next: "scene20_final" }
-    ]
-  },
 
-
-  // =========================================================
-  // FINAL CHECK
-  // =========================================================
-
-  scene20_final: {
-    type: "text",
-    shuffleOptions: true,
-    text: `
-FINAL CHALLENGE
-
-You have 20 seconds to enter the meeting.
-
-Which response would you actually use?
-    `,
     choices: [
       {
-        text: "Can I add something? The situation has changed, so I think we should ask for more information before making a decision.",
+        text: "Complete lesson",
         next: "thank_you_scene"
-      },
-      {
-        text: "I am agree that maybe we should to wait more information.",
-        next: "scene20_retry"
-      },
-      {
-        text: "The situation changed since 2024 and management might changes the plan.",
-        next: "scene20_retry"
-      },
-      {
-        text: "Can I to add something? We have discuss this before deciding.",
-        next: "scene20_retry"
       }
-    ]
-  },
-
-
-  scene20_retry: {
-    type: "text",
-    text: `
-KEEP CONTROL OF THE BASICS:
-
-Can I add something?
-
-The situation HAS CHANGED.
-
-We SHOULD ASK for more information.
-
-Simple.
-
-Correct.
-
-Useful in a real meeting.
-    `,
-    choices: [
-      { text: "Try again", next: "scene20_final" }
     ]
   },
 
@@ -1486,56 +1778,54 @@ Useful in a real meeting.
 
   thank_you_scene: {
     type: "text",
+
     text: `
-WEEK 1 COMPLETE — WHEN THE PLAN CHANGES
+WEEK 2 COMPLETE — SHOULD WE WORK LESS?
 
-TODAY YOU PRACTICED:
+USEFUL MEETING LANGUAGE:
 
-PAST SIMPLE
-→ finished past
+I understand the argument, but...
 
-PRESENT PERFECT
-→ important now
+From our side, the main concern is...
 
-SHOULD
-→ advice
+Before we agree, we need to know...
 
-HAVE TO
-→ necessity
+I think this could work if...
 
-MIGHT
-→ possibility
+We should also consider...
 
 
-MEETING LANGUAGE:
+REMEMBER:
 
-Can I add something?
+Do not choose a tense because
+it "sounds right."
 
-From our side...
+Ask:
 
-Could you explain that again?
+USUAL?
 
-What exactly are you proposing?
+NOW?
 
-I think we should...
+FINISHED?
 
+CONNECTED TO NOW?
 
-FINAL IDEA:
+POSSIBLE FUTURE?
 
-YOU DO NOT NEED PERFECT ENGLISH
-TO PARTICIPATE IN A MEETING.
+HYPOTHETICAL?
 
-ENTER.
-
-MAKE ONE CLEAR POINT.
-
-CONTINUE.
+Then choose the structure.
     `,
+
     endOfCourse: true,
     finishOnEnter: false,
     scoreRaw: 100,
+
     choices: [
-      { text: "Play again", next: "scene1" }
+      {
+        text: "Play again",
+        next: "scene1"
+      }
     ]
   }
 
